@@ -1,0 +1,31 @@
+## Definition of Done
+
+- [ ] The user story/bug ticket has been implemented precisely in the scope of the ticket. - P0
+- [ ] All acceptance criteria have been addressed during the development process. Edge cases have been taken care of. - P0
+- [ ] New code is correctly formatted, there are no lint errors and adheres to the coding standards. It builds without warnings or errors. - P0
+- [ ] Code compiles in both Debug and Release configurations. - P0
+- [ ] Clean Architecture principles best practice Design Patterns (e.g SOLID principles) are followed. - P0
+- [ ] Unit tests have been written and they cover all the necessary cases. All tests pass both on the local environment and on the CI/CD. - P0
+- [ ] The functionality has been tested on DEV (local machine) by the developer who has the ownership of the feature/bugfix. - P0
+- [ ] Solid proof was attached on the PR to demonstrate that our changes work: - P0
+  - [ ] If there was a UI Change: A screenshot was added on the PR, with the changes updated/added highlighted - P0
+  - [ ] If there was a flow/behaviour change: A short video was added on the PR to demonstrate the updated flow. - P0
+- [ ] Accessibility on the UI is preserved. - P0
+- [ ] Performance is satisfactory. - P0
+- [ ] No security flaws have been introduced. - P0
+- [ ] The code has been reviewed by at least one other developer. - P0
+- [ ] Code review feedback has been addressed - P0
+- [ ] Integration Tests pass - P0
+- [ ] All the test scenarios that are mentioned on the ticket have been manually tested on the QA environment and they pass. - P0
+- [ ] There are automated tests for the test scenarios that are mentioned on the ticket. All automated tests pass. - P0
+- [ ] Documentation on our Wiki and/or readme.md files have been added and and the documentation is accurate. JSDocs have been added to explain complex logic. - P1
+- [ ] Architecture decisions are documented. - P0
+- [ ] All public APIs are documented with XML comments - P2
+- [ ] The solution builds successfully in release mode. - P0
+- [ ] Rollback plan is documented (for PROD deployments only) - P0
+- [ ] Production environment is prepared (for PROD deployments only) - P0
+- [ ] Database is set up and tested (for PROD deployments only) - P0
+- [ ] Development team sign-off. - P0
+- [ ] QA/Testing sign-off. - P0
+- [ ] Operations/Infrastructure sign-off. - P0
+- [ ] Business analyst sign-off. - P0
