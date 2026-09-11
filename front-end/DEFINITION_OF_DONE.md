@@ -1,0 +1,23 @@
+## Front-End Definition of Done
+
+- [ ] The user story/bug ticket has been implemented precisely in the scope of the ticket. - P0
+- [ ] All acceptance criteria have been addressed during the development process. Edge cases have been taken care of, including empty, loading, error, and invalid-input states. - P0
+- [ ] New code adheres to the ECM Core Software Development Standards: naming, focused functions, clear control flow, comments, formatting, error handling, DRY, and top-to-bottom readability. - P0
+- [ ] New code adheres to the ECM JavaScript ES6+, TypeScript, and React coding standards. Components stay focused, UI is separated from data access, and API DTOs are mapped at the boundary. - P0
+- [ ] TypeScript types are strict. There is no `any`. Type assertions, non-null assertions, and compiler suppressions (`@ts-ignore`, `@ts-nocheck`) are not used unless local, justified, and unavoidable. Untrusted data is validated at the boundary. - P0
+- [ ] ESLint and the project formatter pass with no new warnings or errors. The production build completes without warnings or errors. - P0
+- [ ] Unit tests have been written and they cover the necessary cases (happy path, edge cases, and user-visible behaviour). All tests pass both on the local environment and on the CI/CD. - P0
+- [ ] Code coverage meets the project threshold for new and changed code. Coverage has not decreased. - P0
+- [ ] The functionality has been tested on DEV (local machine) by the developer who has the ownership of the feature/bugfix. - P0
+- [ ] Solid proof was attached on the PR to demonstrate that our changes work: - P0
+  - [ ] If there was a UI Change: A screenshot was added on the PR, with the changes updated/added highlighted - P0
+  - [ ] If there was a flow/behaviour change: A short video was added on the PR to demonstrate the updated flow. - P0
+- [ ] Accessibility on the UI is preserved (semantic HTML, labelled controls, and keyboard interaction). - P0
+- [ ] Performance is satisfactory. No unnecessary re-renders, blocking work on the main thread, or unjustified memoisation. - P0
+- [ ] No security flaws have been introduced (no untrusted HTML, no secrets in client code, no `eval` / `new Function`). - P0
+- [ ] The code has been reviewed by at least one other developer. - P0
+- [ ] Code review feedback has been addressed. - P0
+- [ ] All the test scenarios that are mentioned on the ticket have been manually tested on the QA environment and they pass. - P0
+- [ ] Documentation on our Wiki and/or README files has been added where the change requires it, and the documentation is accurate. JSDoc has been added only for complex logic or public contracts. - P1
+- [ ] Development team sign-off. - P0
+- [ ] QA/Testing sign-off. - P0
