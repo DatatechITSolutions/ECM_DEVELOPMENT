@@ -65,6 +65,13 @@
     - [Lead With Intent](#lead-with-intent)
   - [The Boy Scout Rule](#the-boy-scout-rule)
     - [Keep Improvements Relevant](#keep-improvements-relevant)
+- [General Notes](#general-notes)
+  - [Maintainability & Readability](#maintainability--readability)
+  - [SOLID Principles](#solid-principles)
+  - [Clean Architecture](#clean-architecture)
+  - [Security & Performance](#security--performance)
+  - [Tooling & Quality Gates](#tooling--quality-gates)
+  - [Code Review Checklist](#code-review-checklist)
 
 ---
 
@@ -2257,3 +2264,62 @@ changed, and supported by appropriate tests\*\*.
 
 > **Every change is an opportunity to improve the codebase slightly
 > without unnecessarily increasing the scope of the task.**
+
+<a id="general-notes"></a>
+
+## General Notes
+
+<a id="maintainability--readability"></a>
+
+### Maintainability & Readability
+
+- Prefer clear code over clever code. Optimize later, based on evidence.
+- Keep functions small and single-purpose (aim for ≤ 30 lines where practical).
+- Name things based on intent: what it does, not how it does it.
+- Avoid duplication (DRY), but don’t force abstraction too early.
+
+<a id="solid-principles"></a>
+
+### SOLID Principles
+
+- **Single Responsibility (SRP):** One module/class should have one reason to change.
+- **Open/Closed (OCP):** Extend behavior without modifying stable code (via interfaces/composition).
+- **Liskov Substitution (LSP):** Subtypes must be safely substitutable for base types.
+- **Interface Segregation (ISP):** Prefer small focused interfaces; don’t force unused members.
+- **Dependency Inversion (DIP):** Depend on abstractions; inject dependencies.
+
+<a id="clean-architecture"></a>
+
+### Clean Architecture
+
+- Separate policy from details: business rules should not depend on UI frameworks, databases, or external services.
+- Dependencies flow inward: UI → Application/Use Cases → Domain; infrastructure plugs in via interfaces.
+- Define boundaries with clear contracts (DTOs, interfaces). Avoid leaking ORM entities across layers.
+- Prefer composition over inheritance for behavior reuse.
+
+<a id="security--performance"></a>
+
+### Security & Performance
+
+- Treat all external input as untrusted: validate, sanitize, and encode appropriately.
+- Use least privilege: minimal access rights for users, services, and DB accounts.
+- Prefer parameterized queries / prepared statements everywhere.
+- Measure performance before optimizing (profilers, logs, metrics).
+- Write code that fails safely (no sensitive data in errors/logs).
+
+<a id="tooling--quality-gates"></a>
+
+### Tooling & Quality Gates
+
+- Automate formatting (prettier/formatter), linting, and static analysis (ESLint, StyleCop/Roslyn analyzers, SpotBugs/Checkstyle).
+- CI must run: build + tests + lint + security scan (SAST/Dependency scanning).
+- Enforce code reviews with a checklist. See [Code Review Checklist](./CODE_REVIEW_CHECKLIST.md).
+- Keep dependencies updated; remove unused packages.
+
+<a id="code-review-checklist"></a>
+
+### Code Review Checklist
+
+- **Correctness:** requirements met, edge cases handled, error paths tested.
+- **Readability:** naming clear, complexity justified, duplication avoided.
+- **Architecture:** dependencies flow inward; boundaries respected; no layer leakage.
